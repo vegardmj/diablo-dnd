@@ -12,6 +12,10 @@
   --height: 60px * 104px / var(--width);
 }
 
+.offset {
+  left: var(--width) / 2;
+}
+
 .hex {
   margin-top: var(--height) / 2;
   width: var(--width);
