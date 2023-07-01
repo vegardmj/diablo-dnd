@@ -8,11 +8,14 @@
 }
 :root {
   --color: #27aae1;
+  --width: 104px;
+  --height: 60px * 104px / var(--width);
 }
+
 .hex {
-  margin-top: 30px;
-  width: 104px;
-  height: 60px;
+  margin-top: var(--height) / 2;
+  width: var(--width);
+  height: var(--height);
   background-color: var(--color);
   border-color: var(--color);
   position: relative;
@@ -22,20 +25,20 @@
   content: " ";
   width: 0;
   height: 0;
-  border-bottom: 30px solid;
+  border-bottom: var(--height) / 2 solid;
   border-color: inherit;
-  border-left: 52px solid transparent;
-  border-right: 52px solid transparent;
+  border-left: var(--width) / 2 solid transparent;
+  border-right: var(--width) / 2 solid transparent;
   position: absolute;
-  top: -30px;
+  top: var(--height) / 2;
 }
 .hex:after {
   content: "";
   width: 0;
   position: absolute;
-  bottom: -30px;
-  border-top: 30px solid;
+  bottom: -var(--height) / 2;
+  border-top: var(--height) / 2 solid;
   border-color: inherit;
-  border-left: 52px solid transparent;
-  border-right: 52px solid transparent;
+  border-left: var(--width) / 2 solid transparent;
+  border-right: var(--width) / 2 solid transparent;
 }
